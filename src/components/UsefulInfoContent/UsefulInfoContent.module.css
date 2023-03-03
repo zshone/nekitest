@@ -1,0 +1,22 @@
+.wrapper {
+  margin: 0;
+  position: absolute;
+  width: 90%;
+  top: 17vh;
+  left: 5%;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(179, 179, 179, 0.8);
+  backdrop-filter: blur(5px) saturate(120%) contrast(140%);
+  max-height: 80vh;
+}
+
+@media (min-width: 1025px) {
+  .wrapper {
+    width: 80%;
+    left: 10%;
+  }
+}

@@ -1,0 +1,19 @@
+.article {
+  padding: 0 1rem 0 0.5rem;
+  margin: 0;
+  max-height: 62vh;
+  text-align: center;
+  overflow: auto;
+}
+
+.article p {
+  text-align: justify;
+}
+
+@media (min-width: 1025px) {
+  .article {
+    width: 40rem;
+    height: fit-content;
+    max-height: 43rem;
+  }
+}

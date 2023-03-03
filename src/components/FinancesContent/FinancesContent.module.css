@@ -1,0 +1,17 @@
+.starting {
+  margin: 0;
+  background-color: rgba(179, 179, 179, 0.5);
+  border-radius: 22px;
+  text-align: center;
+  position: absolute;
+  width: 80%;
+  top: 30vh;
+  left: 10%;
+}
+
+@media (min-width: 1025px) {
+  .starting {
+    width: 30rem;
+    left: calc(50% - 15rem);
+  }
+}

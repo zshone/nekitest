@@ -1,0 +1,132 @@
+.main-navigation {
+  position: absolute;
+  height: 5rem;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  padding: 0.3rem;
+  background-color: rgba(179, 179, 179, 0.5);
+  backdrop-filter: blur(3px) saturate(120%) contrast(200%);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+  z-index: 10;
+}
+
+.toggle {
+  display: inline;
+  position: relative;
+  left: 2%;
+  width: 3rem;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+  z-index: 10;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.toggle span {
+  width: 100%;
+  height: 0.37rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+  border-radius: 22px;
+}
+
+.main-navigation ul {
+  display: none;
+}
+
+.main-navigation li {
+  margin: 0.35rem 0.5rem;
+  display: inline-flex;
+}
+
+.main-navigation a {
+  box-sizing: border-box;
+  padding: 0.9rem;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  background-color: rgba(218, 218, 218, 0.65);
+  border: 2px solid rgba(218, 218, 218, 0);
+  border-radius: 22px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.main-navigation a:hover,
+.main-navigation a:active,
+.main-navigation a.active {
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out;
+}
+
+.btn__logout {
+  box-sizing: border-box;
+  display: inline;
+  position: absolute;
+  top: 0.85rem;
+  right: 2%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 22px;
+  vertical-align: middle;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgba(0, 4, 228, 0.6);
+  color: gold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn__logout:hover,
+.btn__logout:active {
+  background-color: rgba(11, 0, 168, 0.65);
+  color: gold;
+  transition: all 0.2s ease-out;
+}
+
+@media (min-width: 1025px) {
+  .main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    top: 6vh;
+    min-width: 60.6rem;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .main-navigation div {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn__logout {
+    display: inline-flex;
+    position: static;
+    margin: 0.35rem 0.5rem;
+  }
+}
