@@ -3,27 +3,14 @@ import React, { useState } from "react";
 const InfoContext = React.createContext({
   informations: [],
   selectedId: "",
-  idIsSelected: false,
-  urlExists: false,
-  showSinglePage: false,
   giveId: () => {},
-  getUrl: () => {},
 });
 
 export const InfoContextProvider = (props) => {
   const [selectedInfoId, setSelectedInfoId] = useState();
-  const [infoUrl, setInfoUrl] = useState();
-
-  const idIsSelected = !!selectedInfoId;
-  const urlExists = !!infoUrl;
-  const shouldShowSinglePage = urlExists || idIsSelected;
 
   const idHandler = (id) => {
     setSelectedInfoId(id);
-  };
-
-  const getUrl = (params) => {
-    setInfoUrl(params);
   };
 
   const contextValue = {
@@ -54,10 +41,7 @@ export const InfoContextProvider = (props) => {
       },
     ],
     selectedId: selectedInfoId,
-    idIsSelected: idIsSelected,
-    showSinglePage: shouldShowSinglePage,
     giveId: idHandler,
-    getUrl,
   };
 
   return (

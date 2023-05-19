@@ -28,11 +28,13 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
+  border-radius: 22px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #333;
+  border-radius: 22px;
 }
 
 /* Handle on hover */

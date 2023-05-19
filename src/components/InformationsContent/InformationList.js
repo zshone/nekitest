@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 
 import classes from "./InformationList.module.css";
@@ -7,7 +8,6 @@ import InformationFragment from "./InformationFragment";
 
 const InformationList = () => {
   const infoCtx = useContext(InfoContext);
-
   const infoList = infoCtx.informations.map((info) => (
     <InformationFragment
       key={info.id}

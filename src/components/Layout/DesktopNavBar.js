@@ -54,22 +54,20 @@ const DesktopNavBar = (props) => {
         </li>
       </ul>
       <div>
-        <ul>
-          {authCtx.isLoggedIn && (
+        {authCtx.isLoggedIn && (
+          <ul>
             <li>
               <NavLink activeClassName={classes.active} to="/dokumenta">
                 Документа
               </NavLink>
             </li>
-          )}
-          {authCtx.isLoggedIn && (
             <li>
               <NavLink activeClassName={classes.active} to="/finansije">
                 Финансије
               </NavLink>
             </li>
-          )}
-        </ul>
+          </ul>
+        )}
         {!authCtx.isLoggedIn && (
           <button className={classes.btn__logout} onClick={props.onShowLogin}>
             Пријави се

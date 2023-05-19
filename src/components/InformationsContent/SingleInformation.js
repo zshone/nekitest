@@ -13,24 +13,11 @@ const SingleInformation = () => {
     (info) => info.id === params.infoId
   );
 
-  const clickedInfo = infoCtx.informations.find(
-    (info) => info.id === infoCtx.selectedId
+  return (
+    <article className={classes.article}>
+      <h1>{paramsInfo.title}</h1>
+      <p>{paramsInfo.text}</p>
+    </article>
   );
-
-  if (paramsInfo) {
-    return (
-      <article className={classes.article}>
-        <h1>{paramsInfo.title}</h1>
-        <p>{paramsInfo.text}</p>
-      </article>
-    );
-  } else {
-    return (
-      <article className={classes.article}>
-        <h1>{clickedInfo.title}</h1>
-        <p>{clickedInfo.text}</p>
-      </article>
-    );
-  }
 };
 export default SingleInformation;

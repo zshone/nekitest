@@ -1,41 +1,43 @@
-import { useState, Fragment } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleChevronLeft,
-  faCircleChevronRight,
-  faCircleXmark,
-} from "@fortawesome/free-solid-svg-icons";
+import * as React from "react";
+import { Fragment, useState } from "react";
+import { motion, AnimatePresence, wrap } from "framer-motion";
+import { images } from "./image-data";
 
 import Modal from "../UI/Modal";
 import classes from "./ImageGallery.module.css";
 
-import Thumb1 from "../../assets/Thumb1.jpg";
-import Thumb2 from "../../assets/Thumb2.jpg";
-import Thumb3 from "../../assets/Thumb3.jpg";
-import Thumb4 from "../../assets/Thumb4.jpg";
-import Thumb5 from "../../assets/Thumb5.jpg";
-import Thumb6 from "../../assets/Thumb6.jpg";
-import Blok1 from "../../assets/Blok1.jpg";
-import Blok2 from "../../assets/Blok2.jpg";
-import Blok3 from "../../assets/Blok3.jpg";
-import Blok4 from "../../assets/Blok4.jpg";
-import Blok5 from "../../assets/Blok5.jpg";
-import Blok6 from "../../assets/Blok6.jpg";
+const variants = {
+  enter: (direction) => {
+    return {
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1,
+  },
+  exit: (direction) => {
+    return {
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
+};
 
-const ImageGallery = () => {
-  const images = [
-    { thumb: Thumb1, img: Blok1 },
-    { thumb: Thumb2, img: Blok2 },
-    { thumb: Thumb3, img: Blok3 },
-    { thumb: Thumb4, img: Blok4 },
-    { thumb: Thumb5, img: Blok5 },
-    { thumb: Thumb6, img: Blok6 },
-  ];
-  const [slideNumber, setSlideNumber] = useState(0);
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset, velocity) => {
+  return Math.abs(offset) * velocity;
+};
+
+const NewGallery = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [[page, direction], setPage] = useState([0, 0]);
 
   const openModalHandler = (index) => {
-    setSlideNumber(index);
+    setPage([index, 0]);
     setOpenModal(true);
   };
 
@@ -43,41 +45,50 @@ const ImageGallery = () => {
     setOpenModal(false);
   };
 
-  const prevSlide = () => {
-    slideNumber === 0
-      ? setSlideNumber(images.length - 1)
-      : setSlideNumber(slideNumber - 1);
-  };
+  const imageIndex = wrap(0, images.length, page);
 
-  const nextSlide = () => {
-    slideNumber + 1 === images.length
-      ? setSlideNumber(0)
-      : setSlideNumber(slideNumber + 1);
+  const paginate = (newDirection) => {
+    setPage([page + newDirection, newDirection]);
   };
 
   return (
     <Fragment>
       {openModal && (
-        <Modal onClose={closeModalHandler}>
-          <div className={classes.slideWrap}>
-            <FontAwesomeIcon
-              icon={faCircleXmark}
-              className={classes.btnClose}
-              onClick={closeModalHandler}
-            />
-            <FontAwesomeIcon
-              icon={faCircleChevronLeft}
-              className={classes.btnPrev}
-              onClick={prevSlide}
-            />
-            <FontAwesomeIcon
-              icon={faCircleChevronRight}
-              className={classes.btnNext}
-              onClick={nextSlide}
-            />
+        <Modal className={classes.modal} onClose={closeModalHandler}>
+          <AnimatePresence initial={false} custom={direction}>
             <div className={classes.fullscreenImage}>
-              <img src={images[slideNumber].img} alt="Velika slika" />
+              <motion.img
+                key={page}
+                src={images[imageIndex].img}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.2 },
+                }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipe = swipePower(offset.x, velocity.x);
+
+                  if (swipe < -swipeConfidenceThreshold) {
+                    paginate(1);
+                  } else if (swipe > swipeConfidenceThreshold) {
+                    paginate(-1);
+                  }
+                }}
+              />
             </div>
+          </AnimatePresence>
+          <div className={classes.next} onClick={() => paginate(1)}>
+            {"‣"}
+          </div>
+          <div className={classes.prev} onClick={() => paginate(-1)}>
+            {"‣"}
           </div>
         </Modal>
       )}
@@ -98,4 +109,4 @@ const ImageGallery = () => {
   );
 };
 
-export default ImageGallery;
+export default NewGallery;

@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import AuthContext from "./store/auth-context";
 import Layout from "./components/Layout/Layout";
@@ -15,6 +16,7 @@ import InformationContent from "./pages/InformationContent";
 
 function App() {
   const authCtx = useContext(AuthContext);
+  const location = useLocation();
 
   const documents = authCtx.isLoggedIn ? (
     <Documents />
@@ -30,31 +32,33 @@ function App() {
 
   return (
     <Layout>
-      <Switch>
-        <Route path="/" exact>
-          <Redirect to="/pocetna" />
-        </Route>
-        <Route path="/pocetna">
-          <HomePage />
-        </Route>
-        <Route path="/o-nama">
-          <AboutUs />
-        </Route>
-        <Route path="/obavestenja" exact>
-          <Informations />
-        </Route>
-        <Route path="/obavestenja/:infoId">
-          <InformationContent />
-        </Route>
-        <Route path="/korisne-informacije">
-          <UsefulInfo />
-        </Route>
-        <Route path="/galerija">
-          <Gallery />
-        </Route>
-        <Route path="/dokumenta">{documents}</Route>
-        <Route path="/finansije">{finances}</Route>
-      </Switch>
+      <AnimatePresence mode="wait">
+        <Switch location={location} key={location.pathname}>
+          <Route path="/" exact>
+            <Redirect to="/pocetna" />
+          </Route>
+          <Route path="/pocetna">
+            <HomePage />
+          </Route>
+          <Route path="/o-nama">
+            <AboutUs />
+          </Route>
+          <Route path="/obavestenja" exact>
+            <Informations />
+          </Route>
+          <Route path="/obavestenja/:infoId">
+            <InformationContent />
+          </Route>
+          <Route path="/korisne-informacije">
+            <UsefulInfo />
+          </Route>
+          <Route path="/galerija">
+            <Gallery />
+          </Route>
+          <Route path="/dokumenta">{documents}</Route>
+          <Route path="/finansije">{finances}</Route>
+        </Switch>
+      </AnimatePresence>
     </Layout>
   );
 }
