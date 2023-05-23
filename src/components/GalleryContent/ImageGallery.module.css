@@ -1,19 +1,20 @@
-.modal {
-  width: 70%;
-  padding: 0;
-  background-color: transparent;
-  box-shadow: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: pop-out 300ms ease-out forwards;
+.galleryBackdrop {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-.modal > div {
+.galleryModal {
+  position: static;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  animation: pop-out 300ms ease-out forwards;
+  left: unset;
+}
+
+.galleryModal > div {
+  width: 100%;
 }
 
 .galleryWrapper {
@@ -23,7 +24,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 0 auto;
-  max-height: 35rem;
+  max-height: 25rem;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -43,16 +44,8 @@
   user-select: none;
 }
 
-.singleImage img:hover {
-  transform: scale(1.06);
-  transition: transform 300ms ease-out;
-}
-
 .fullscreenImage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  order: 2;
+  width: 100%;
 }
 
 .fullscreenImage img {
@@ -62,33 +55,54 @@
 
 .next,
 .prev {
+  top: calc(50% - 20px);
+  position: absolute;
   background: white;
-  border-radius: 50%;
-  padding: 1.5rem;
-  width: 50px;
-  height: 50px;
+  border-radius: 30px;
+  width: 25px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 15px;
   z-index: 20;
 }
 
 .next {
-  margin-left: 1.5rem;
-  order: 3;
+  right: 10px;
 }
 
 .prev {
-  margin-right: 1.5rem;
+  left: 10px;
   transform: scale(-1);
-  order: 1;
 }
 
 @media (min-width: 1025px) {
+  .galleryBackdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  .galleryModal {
+    width: 70%;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pop-out 300ms ease-out forwards;
+  }
+
+  .galleryModal > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .galleryWrapper {
     max-width: 100%;
     max-height: 100%;
@@ -97,6 +111,44 @@
 
   .singleImage {
     width: 300px;
+  }
+
+  .singleImage img:hover {
+    transform: scale(1.06);
+    transition: transform 300ms ease-out;
+  }
+
+  .fullscreenImage {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+  }
+
+  .fullscreenImage img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .next,
+  .prev {
+    position: static;
+    border-radius: 50%;
+    padding: 1.5rem;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+  .next {
+    margin-left: 1.5rem;
+    order: 3;
+  }
+
+  .prev {
+    margin-right: 1.5rem;
+    transform: scale(-1);
+    order: 1;
   }
 }
 

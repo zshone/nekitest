@@ -54,7 +54,11 @@ const NewGallery = () => {
   return (
     <Fragment>
       {openModal && (
-        <Modal className={classes.modal} onClose={closeModalHandler}>
+        <Modal
+          backdropClassName={classes.galleryBackdrop}
+          modalClassName={classes.galleryModal}
+          onClose={closeModalHandler}
+        >
           <AnimatePresence initial={false} custom={direction}>
             <div className={classes.fullscreenImage}>
               <motion.img

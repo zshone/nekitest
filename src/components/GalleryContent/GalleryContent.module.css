@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 27vh;
+  top: 20vh;
+  bottom: 10vh;
   width: 80%;
   left: 10%;
 }
@@ -22,6 +23,7 @@
     top: 30vh;
     width: 63rem;
     left: calc(50% - 31.5rem);
+    bottom: unset;
   }
 
   .card {

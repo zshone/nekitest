@@ -1,5 +1,10 @@
 .modalWrapper {
-  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .backdrop {
@@ -7,7 +12,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.75);
 }
@@ -15,7 +20,6 @@
 .modal {
   position: fixed;
   width: 80%;
-  top: 30vh;
   left: 10%;
   background-color: white;
   padding: 1.5rem;
@@ -26,13 +30,6 @@
 }
 
 @media (min-width: 768px) {
-  .modalWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: static;
-  }
   .modal {
     position: static;
     width: fit-content;
