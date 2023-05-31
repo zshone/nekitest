@@ -1,4 +1,7 @@
 import { Fragment, useState } from "react";
+
+import classes from "./Layout.module.css";
+
 import Header from "./Header";
 import AuthForm from "../Auth/AuthForm";
 
@@ -16,8 +19,10 @@ const Layout = (props) => {
   return (
     <Fragment>
       {loginInputIsShown && <AuthForm onHideLogin={hideLoginAuthHandler} />}
-      <Header onShowLogin={showLoginAuthHandler} />
-      <main>{props.children}</main>
+      <div className={classes.wrapper}>
+        <Header onShowLogin={showLoginAuthHandler} />
+        <main className={classes.main}>{props.children}</main>
+      </div>
     </Fragment>
   );
 };

@@ -1,9 +1,16 @@
+import React from "react";
+import { motion } from "framer-motion";
+
 import classes from "./Card.module.css";
 
-const Card = (props) => {
+const Card = React.forwardRef((props, ref) => {
   return (
-    <div className={`${classes.card} ${props.className}`}>{props.children}</div>
+    <div ref={ref} className={`${classes.card} ${props.className}`}>
+      <div className={classes.content}>{props.children}</div>
+    </div>
   );
-};
+});
 
-export default Card;
+const MotionCard = motion(Card);
+
+export default MotionCard;

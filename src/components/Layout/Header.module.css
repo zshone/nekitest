@@ -1,10 +1,7 @@
 .header {
-  position: absolute;
-  top: 6vh;
-  left: 5%;
-  right: 5%;
-  padding: 0.3rem;
+  width: 100%;
   background-color: rgba(179, 179, 179, 0.5);
+  backdrop-filter: blur(3px) saturate(120%) contrast(200%);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 22px;
   z-index: 10;
@@ -71,4 +68,13 @@
   background-color: rgba(11, 0, 168, 0.65);
   color: gold;
   transition: all 0.2s ease-out;
+}
+
+@media (min-width: 1025px) {
+  .header {
+    position: absolute;
+    top: 5%;
+    width: 90%;
+    left: 5%;
+  }
 }

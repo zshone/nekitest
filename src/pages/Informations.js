@@ -1,25 +1,22 @@
 import { InfoContextProvider } from "../store/info-context";
-import { motion } from "framer-motion";
 
 import classes from "./Informations.module.css";
 
 import InformationList from "../components/InformationsContent/InformationList";
-import Card from "../components/UI/Card";
+import MotionCard from "../components/UI/Card";
 
 const Informations = () => {
   return (
-    <motion.div
+    <MotionCard
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       exit={{ scale: 0 }}
-      className={classes.wrapper}
+      className={classes.card}
     >
-      <Card className={classes.card}>
-        <InfoContextProvider>
-          <InformationList />
-        </InfoContextProvider>
-      </Card>
-    </motion.div>
+      <InfoContextProvider>
+        <InformationList />
+      </InfoContextProvider>
+    </MotionCard>
   );
 };
 

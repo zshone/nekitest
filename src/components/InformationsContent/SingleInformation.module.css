@@ -1,7 +1,10 @@
 .article {
-  padding: 0 1rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem 0 1rem;
   margin: 0;
-  max-height: 62vh;
+  width: 100%;
+  height: 100%;
   text-align: center;
   overflow: auto;
 }
@@ -10,10 +13,16 @@
   text-align: justify;
 }
 
+@media (max-width: 1025px) and (orientation: landscape) {
+  .article {
+    max-height: unset;
+  }
+}
+
 @media (min-width: 1025px) {
   .article {
     width: 40rem;
     height: fit-content;
-    max-height: 43rem;
+    max-height: 75vh;
   }
 }

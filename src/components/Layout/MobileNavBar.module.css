@@ -12,7 +12,7 @@
   left: 0;
   width: 80%;
   height: 100vh;
-  background: white;
+  background-color: rgb(255, 255, 255);
   z-index: 30;
   animation: slide-right 0.4s ease-out forwards;
 }

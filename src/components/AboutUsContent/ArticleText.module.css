@@ -1,0 +1,14 @@
+.heading {
+  margin: 0;
+  text-align: center;
+}
+
+.heading ~ p {
+  text-align: justify;
+}
+
+.heading ~ ul {
+  margin: 0;
+  padding-left: 1.22rem;
+  text-align: left;
+}

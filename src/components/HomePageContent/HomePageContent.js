@@ -1,20 +1,17 @@
-import { motion } from "framer-motion";
-import Card from "../UI/Card";
+import MotionCard from "../UI/Card";
 import classes from "./HomePageContent.module.css";
 
 const HomePageContent = () => {
   return (
-    <motion.section
+    <MotionCard
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       exit={{ scale: 0 }}
-      className={classes.starting}
+      className={classes.card}
     >
-      <Card>
-        <h1>Јурија Гагарина</h1>
-        <p>Добродошли на сајт стамбене заједнице Јурија Гагарина!</p>
-      </Card>
-    </motion.section>
+      <h1>Јурија Гагарина 122</h1>
+      <p>Добродошли на сајт стамбене заједнице Јурија Гагарина 122!</p>
+    </MotionCard>
   );
 };
 

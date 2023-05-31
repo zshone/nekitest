@@ -1,32 +1,50 @@
-.wrapper {
+.card {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 20vh;
-  bottom: 10vh;
   width: 80%;
+  min-width: 11.38rem;
   left: 10%;
-}
-
-.card {
   margin: 0;
   padding: 1.5rem;
-  width: 34.3rem;
-  min-width: 16rem;
   background-color: rgba(179, 179, 179, 0.5);
   backdrop-filter: blur(5px);
+  height: fit-content;
+  overflow: auto;
+}
+
+.card > div {
+  display: flex;
+  max-height: 70vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.card > div::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 475px) {
+  .card {
+    width: 23.69rem;
+    left: calc(50% - 11.85rem);
+  }
+}
+
+@media (min-width: 902px) {
+  .card {
+    width: 45.15rem;
+    left: calc(50% - 22.58rem);
+  }
 }
 
 @media (min-width: 1025px) {
-  .wrapper {
-    top: 30vh;
-    width: 63rem;
-    left: calc(50% - 31.5rem);
-    bottom: unset;
-  }
-
   .card {
-    width: 63rem;
+    top: 30vh;
+    width: 62rem;
+    left: calc(50% - 31rem);
   }
 }

@@ -1,4 +1,4 @@
-.starting {
+.card {
   margin: 0;
   background-color: rgba(179, 179, 179, 0.5);
   border-radius: 22px;
@@ -10,8 +10,8 @@
 }
 
 @media (min-width: 1025px) {
-  .starting {
-    width: 30rem;
-    left: calc(50% - 15rem);
+  .card {
+    width: 45rem;
+    left: calc(50% - 22.5rem);
   }
 }

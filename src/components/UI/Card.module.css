@@ -3,3 +3,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 22px;
 }
+
+.content:hover::-webkit-scrollbar-thumb,
+.content > *:hover::-webkit-scrollbar-thumb {
+  background: #333;
+}

@@ -1,22 +1,35 @@
-.wrapper {
-  margin: 0;
-  position: absolute;
-  width: 90%;
-  top: 17vh;
-  left: 5%;
-}
-
 .card {
   display: flex;
-  justify-content: space-between;
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 17vh;
+  max-height: 80vh;
   background-color: rgba(179, 179, 179, 0.8);
   backdrop-filter: blur(5px) saturate(120%) contrast(140%);
-  max-height: 80vh;
+}
+
+.card > div {
+  width: 100%;
+  overflow: auto;
+}
+
+@media (max-width: 1025px) and (orientation: landscape) {
+  .card {
+    top: 22vh;
+    max-height: 75vh;
+  }
 }
 
 @media (min-width: 1025px) {
-  .wrapper {
+  .card {
     width: 80%;
     left: 10%;
+    justify-content: space-between;
+  }
+
+  .card > div {
+    display: flex;
+    justify-content: space-between;
   }
 }

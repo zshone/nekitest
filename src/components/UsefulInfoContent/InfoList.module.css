@@ -1,10 +1,6 @@
 .section {
-  display: flex;
-  flex-direction: column;
   padding: 0 0.5rem;
   margin: 0.5rem;
-  width: 50%;
-  overflow: auto;
 }
 
 .section article a {
@@ -30,4 +26,11 @@
 .section a:active {
   color: white;
   transition: all 200ms ease-in-out;
+}
+
+@media (min-width: 1025px) {
+  .section {
+    width: 50%;
+    overflow: auto;
+  }
 }

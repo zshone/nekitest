@@ -1,8 +1,8 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import classes from "./InformationsContent.module.css";
 
-import Card from "../UI/Card";
+import MotionCard from "../UI/Card";
 import InformationList from "./InformationList";
 import SingleInformation from "./SingleInformation";
 
@@ -10,21 +10,22 @@ const InformationsContent = () => {
   return (
     <div className={classes.wrapper}>
       <AnimatePresence key={"/obavestenja"} mode="wait">
-        <motion.div animate={{ scale: 1 }} exit={{ scale: 0 }}>
-          <Card className={classes.card}>
-            <InformationList />
-          </Card>
-        </motion.div>
+        <MotionCard
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          className={classes.infoListCard}
+        >
+          <InformationList />
+        </MotionCard>
       </AnimatePresence>
-      <motion.div
+      <MotionCard
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
+        className={classes.singleInfoCard}
       >
-        <Card className={classes.card}>
-          <SingleInformation />
-        </Card>
-      </motion.div>
+        <SingleInformation />
+      </MotionCard>
     </div>
   );
 };

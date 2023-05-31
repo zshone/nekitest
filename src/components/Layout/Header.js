@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import classes from "./Header.module.css";
+
 import DesktopNavBar from "./DesktopNavBar";
 import MobileNavBar from "./MobileNavBar";
 
@@ -15,7 +17,7 @@ const Header = (props) => {
   };
 
   return (
-    <header>
+    <header className={classes.header}>
       {openSidebar && <MobileNavBar onHideSidebar={closeSidebarHandler} />}
       <DesktopNavBar
         onShowSidebar={openSidebarHandler}
