@@ -1,5 +1,3 @@
-import { InfoContextProvider } from "../store/info-context";
-
 import classes from "./Informations.module.css";
 
 import InformationList from "../components/InformationsContent/InformationList";
@@ -13,9 +11,7 @@ const Informations = () => {
       exit={{ scale: 0 }}
       className={classes.card}
     >
-      <InfoContextProvider>
-        <InformationList />
-      </InfoContextProvider>
+      <InformationList />
     </MotionCard>
   );
 };

@@ -7,19 +7,23 @@
 }
 
 .infoListCard {
+  display: flex;
+  justify-content: space-between;
   background-color: rgba(179, 179, 179, 0.8);
   backdrop-filter: blur(5px) saturate(120%) contrast(140%);
   padding: 0.5rem;
-  height: fit-content;
   max-height: calc(100% - 6.75rem);
 }
 
 .infoListCard > div {
+  display: flex;
+  width: 100%;
   height: 100%;
 }
 
 .singleInfoCard {
   display: flex;
+  justify-content: space-around;
   max-height: calc(100% - 6.75rem);
   background-color: rgba(179, 179, 179, 0.8);
   backdrop-filter: blur(5px) saturate(120%) contrast(140%);
@@ -38,7 +42,6 @@
   }
 
   .infoListCard {
-    height: unset;
     max-height: 100%;
   }
 

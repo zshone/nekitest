@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 20vh;
+  top: 15vh;
   width: 80%;
   min-width: 11.38rem;
   left: 10%;
@@ -38,6 +38,12 @@
   .card {
     width: 45.15rem;
     left: calc(50% - 22.58rem);
+  }
+}
+
+@media (max-width: 1025px) and (orientation: landscape) {
+  .card {
+    top: 30vh;
   }
 }
 

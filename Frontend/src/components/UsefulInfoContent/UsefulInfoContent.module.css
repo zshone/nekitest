@@ -1,10 +1,6 @@
 .card {
   display: flex;
-  position: absolute;
-  width: 90%;
-  left: 5%;
-  top: 17vh;
-  max-height: 80vh;
+  height: 100%;
   background-color: rgba(179, 179, 179, 0.8);
   backdrop-filter: blur(5px) saturate(120%) contrast(140%);
 }
@@ -14,17 +10,13 @@
   overflow: auto;
 }
 
-@media (max-width: 1025px) and (orientation: landscape) {
-  .card {
-    top: 22vh;
-    max-height: 75vh;
-  }
-}
-
 @media (min-width: 1025px) {
   .card {
+    position: absolute;
+    top: 17vh;
     width: 80%;
     left: 10%;
+    max-height: 80vh;
     justify-content: space-between;
   }
 
