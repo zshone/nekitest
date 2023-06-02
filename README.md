@@ -70,26 +70,26 @@ The page will reload when you make changes.
 
 ### Home
 
-![Home](https://github.com/PavlePetrovic62/residential-community-app/blob/master/public/screenshots/Home.png)
+![Home](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Home.png)
 
 ### Announcements
 
-![Announcements](https://github.com/PavlePetrovic62/residential-community-app/blob/master/public/screenshots/Announcements.png)
+![Announcements](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Announcements.png)
 
 ### Useful information
 
-![Useful information](https://github.com/PavlePetrovic62/residential-community-app/blob/master/public/screenshots/UsefulInfo.png)
+![Useful information](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/UsefulInfo.png)
 
 ### Gallery
 
-![Gallery(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/public/screenshots/Gallery(1).png>)
-![Gallery(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/public/screenshots/Gallery(2).png>)
+![Gallery(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Gallery(1).png>)
+![Gallery(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Gallery(2).png>)
 
 ### Sign In
 
-![SignIn](https://github.com/PavlePetrovic62/residential-community-app/blob/master/public/screenshots/SignIn.png)
+![SignIn](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/SignIn.png)
 
 ### Mobile version
 
-![Mobile(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/public/screenshots/Mobile(1).png>)
-![Mobile(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/public/screenshots/Mobile(2).png>)
+![Mobile(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(1).png>)
+![Mobile(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(2).png>)
