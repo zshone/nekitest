@@ -8,7 +8,7 @@ services:
     container_name: propertymanagementdotnetwebapi
     image: ${DOCKER_REGISTRY-}propertymanagementdotnetwebapi
     build:
-      context: propertymanagementdotnetwebapi
+      context: PropertyManagementDotnetWebApi
       dockerfile: Dockerfile
     ports:
       - "5000:80"
