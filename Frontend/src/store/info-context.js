@@ -24,7 +24,7 @@ export const InfoContextProvider = (props) => {
     const fetchNotifications = async () => {
       setIsLoading(true);
       const response = await fetch(
-        "https://sz-jg-122.onwebapp.io/api/notifications"
+        "http://sz-jg-122.onwebapp.io/api/notifications"
       );
       const responseData = await response.json();
       const transformedInfo = responseData.notifications.map((infoData) => {
