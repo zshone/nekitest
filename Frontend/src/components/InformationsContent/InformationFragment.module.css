@@ -36,6 +36,15 @@
   transition: all 0.2s ease-out;
 }
 
+@media (prefers-color-scheme: dark) {
+  .list-item h2 {
+    color: rgb(0, 0, 0);
+  }
+  .list-item p {
+    color: rgb(0, 0, 0);
+  }
+}
+
 @media (min-width: 1025px) {
   .list-item {
     width: 100%;

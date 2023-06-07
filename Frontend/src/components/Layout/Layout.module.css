@@ -10,15 +10,16 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   max-height: calc(100% - 4.7rem);
 }
 
 @media (min-width: 1025px) {
   .wrapper {
-    display: block;
+    /* display: block;
     width: unset;
-    height: unset;
+    height: unset; */
   }
 
   .main {

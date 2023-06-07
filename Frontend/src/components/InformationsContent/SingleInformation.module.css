@@ -1,7 +1,7 @@
 .article {
   display: flex;
   flex-direction: column;
-  padding: 0 0.5rem 0 1rem;
+  padding: 0.5rem;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -11,6 +11,15 @@
 
 .article p {
   text-align: justify;
+}
+
+@media (prefers-color-scheme: dark) {
+  .article h1 {
+    color: rgb(0, 0, 0);
+  }
+  .article p {
+    color: rgb(0, 0, 0);
+  }
 }
 
 @media (max-width: 1025px) and (orientation: landscape) {
@@ -24,5 +33,6 @@
     width: 40rem;
     height: fit-content;
     max-height: 75vh;
+    padding: 0 0.5rem 0 1rem;
   }
 }

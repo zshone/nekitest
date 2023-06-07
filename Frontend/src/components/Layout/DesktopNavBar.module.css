@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .toggle {
@@ -85,18 +86,7 @@
   color: rgb(251, 255, 0);
 }
 
-.btn__logout:hover,
-.btn__logout:active {
-  background: rgba(251, 255, 0, 0.65);
-  color: rgb(0, 0, 0);
-  transition: all 0.2s ease-out;
-}
-
 @media (min-width: 1025px) {
-  .main-navigation {
-    min-width: 62.88rem;
-  }
-
   .toggle {
     display: none;
   }
@@ -106,5 +96,12 @@
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  .btn__logout:hover,
+  .btn__logout:active {
+    background: rgba(251, 255, 0, 0.65);
+    color: rgb(0, 0, 0);
+    transition: all 0.2s ease-out;
   }
 }

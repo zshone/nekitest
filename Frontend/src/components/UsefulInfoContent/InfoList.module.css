@@ -18,19 +18,31 @@
 }
 
 .section a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
-.section a:hover,
-.section a:active {
-  color: white;
-  transition: all 200ms ease-in-out;
+@media (prefers-color-scheme: dark) {
+  .section h3 {
+    color: rgb(0, 0, 0);
+  }
+  .section p {
+    color: rgb(0, 0, 0);
+  }
+  .section a {
+    color: rgb(0, 0, 0);
+  }
 }
 
 @media (min-width: 1025px) {
   .section {
     width: 50%;
     overflow: auto;
+  }
+
+  .section a:hover,
+  .section a:active {
+    color: rgb(255, 255, 255);
+    transition: all 200ms ease-in-out;
   }
 }

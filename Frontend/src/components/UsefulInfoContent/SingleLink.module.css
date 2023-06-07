@@ -1,15 +1,23 @@
 .list-item {
   padding: 0.5rem 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .list-item a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
-.list-item a:hover,
-.list-item a:active {
-  color: white;
-  transition: all 200ms ease-in-out;
+@media (prefers-color-scheme: dark) {
+  .list-item a {
+    color: rgb(0, 0, 0);
+  }
+}
+
+@media (min-width: 1025px) {
+  .list-item a:hover,
+  .list-item a:active {
+    color: rgb(255, 255, 255);
+    transition: all 200ms ease-in-out;
+  }
 }
