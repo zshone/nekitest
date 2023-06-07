@@ -47,49 +47,45 @@ Now that being said, here is the list of features:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To run this app, you need to have [Node.js](https://nodejs.org/) installed on your machine.
+To run this app, you need to have [Docker](https://www.docker.com/) installed on your machine.
 
-After installing Node.js, you need to execute two steps:
+After installing Docker, you need to start it and execute the following command in the project directory:
 
-1. In the project directory you need to run:
+### `docker compose up --build`
 
-   ### `npm install`
+This will build the images and start the containers that are needed for the app.
 
-This will install all the dependencies that are needed for the app to work properly.
-
-2. Then, you need to run:
-
-   ### `npm start`
-
-This will run the app in the development mode.\
+The app will start in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.
 
 ## What the app looks like
 
 ### Home
 
-![Home](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Home.png)
+![Home](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Home.jpg)
+
+### About us
+
+![About us](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/AboutUs.jpg)
 
 ### Announcements
 
-![Announcements](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Announcements.png)
+![Announcements](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Announcements.jpg)
 
 ### Useful information
 
-![Useful information](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/UsefulInfo.png)
+![Useful information](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/UsefulInfo.jpg)
 
 ### Gallery
 
-![Gallery(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Gallery(1).png>)
-![Gallery(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Gallery(2).png>)
+![Gallery(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Gallery(1).jpg>)
+![Gallery(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Gallery(2).jpg>)
 
 ### Sign In
 
-![SignIn](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/SignIn.png)
+![SignIn](https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/SignIn.jpg)
 
 ### Mobile version
 
-![Mobile(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(1).png>)
-![Mobile(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(2).png>)
+![Mobile(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(1).jpg>)
+![Mobile(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(2).jpg>)
