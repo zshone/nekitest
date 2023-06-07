@@ -20,7 +20,7 @@ const InformationList = () => {
   return (
     <ul className={classes.list}>
       {!infoCtx.infoAreLoading && infoList}
-      {infoCtx.infoAreLoading && <p>Obaveštenja se učitavaju...</p>}
+      {infoCtx.infoAreLoading && <p>Обавештења се учитавају...</p>}
     </ul>
   );
 };
