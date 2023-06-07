@@ -21,7 +21,11 @@ const DesktopNavBar = (props) => {
 
   return (
     <nav className={classes["main-navigation"]}>
-      <button className={classes.toggle} onClick={props.onShowSidebar}>
+      <button
+        type="button"
+        className={classes.toggle}
+        onClick={props.onShowSidebar}
+      >
         <span></span>
         <span></span>
         <span></span>
