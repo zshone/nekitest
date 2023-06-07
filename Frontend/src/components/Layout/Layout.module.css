@@ -16,12 +16,6 @@
 }
 
 @media (min-width: 1025px) {
-  .wrapper {
-    /* display: block;
-    width: unset;
-    height: unset; */
-  }
-
   .main {
     display: block;
     width: unset;
