@@ -87,5 +87,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### Mobile version
 
-![Mobile(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(1).jpg>)
+![Mobile(1)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(1).jpg>)  
 ![Mobile(2)](<https://github.com/PavlePetrovic62/residential-community-app/blob/master/Frontend/public/screenshots/Mobile(2).jpg>)
