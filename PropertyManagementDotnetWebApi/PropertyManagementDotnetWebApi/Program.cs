@@ -27,7 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(frontendOrigin);
+app.UseCors();
 
 app.UseAuthorization();
 
