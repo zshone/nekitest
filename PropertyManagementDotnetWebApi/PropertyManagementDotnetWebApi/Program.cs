@@ -6,7 +6,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(frontendOrigin,
                           policy =>
                           {
-                              policy.WithOrigins("https://nekitestic.onwebapp.io", "http://localhost:3000")
+                              policy.WithOrigins("http://localhost:3000")
                                                   .AllowAnyHeader()
                                                   .AllowAnyMethod();
                           });
