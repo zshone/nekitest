@@ -13,6 +13,8 @@ services:
     ports:
       - "5000:80"
       - "5001:443"
+    environment:
+      - ASPNETCORE_URLS=https://+:443;http://+:80
     networks:
       - propertymanagement-network
   frontend:

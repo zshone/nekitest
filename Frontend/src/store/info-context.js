@@ -24,7 +24,7 @@ export const InfoContextProvider = (props) => {
     const fetchNotifications = async () => {
       setIsLoading(true);
       const response = await fetch(
-        "http://localhost:5000/api/notifications"
+        "api/notifications"
       );
       const responseData = await response.json();
       const transformedInfo = responseData.notifications.map((infoData) => {
